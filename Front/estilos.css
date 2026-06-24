@@ -1,16 +1,36 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #eef3f7;
+  font-family:fantasy;
+  background-color: #ffffff;
 }
 
 h1 {
    color:rgb(35, 39, 29);
+   text-decoration-skip: initial;
+   text-shadow:  #530a63;
+   text-emphasis-position: initial;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.introduccion{
+  background: linear-gradient(135deg, #3d0749, #ffb0fe);
+}
+
+.introduccion h1 {
+  color: #e9b1f6;
+}
+
+.Menu {
+  background-color: #bebff8;
+  width: 100%;
+  margin: 5px;
+  padding: 0.5%;
+  border-radius: 5px;
 }
 
 header {
   background: linear-gradient(135deg, #da1f1f, #f9ff7f);
-  color: white;
+  color: rgb(255, 255, 255);
   text-align: center;
   padding: 40px;
 }
@@ -22,16 +42,17 @@ main {
 }
 
 .panel {
-  background: white;
+  background: rgb(170, 164, 168);
   padding: 25px;
   border-radius: 15px;
   margin-bottom: 25px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+  box-shadow: 0 0 25px rgba(0,0,0,0.15);
 }
 
 h2 {
-  color: #2477b3;
+  color: #530a63;
   text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 form {
@@ -47,7 +68,7 @@ input, select, button {
 }
 
 button {
-  background-color: #a24f77;
+  background-color: #611bd9;
   text-shadow: #b3261e;
   color: rgb(182, 240, 141);
   border: none;
@@ -55,7 +76,9 @@ button {
 }
 
 button:hover {
-  background-color: #15527d;
+  background-color: #343638;
+  transform: scale(1.05);
+
 }
 
 #mensaje {
@@ -91,12 +114,12 @@ button:hover {
 
 .tarjeta {
   width: 230px;
-  background: #f8fbff;
-  border-radius: 12px;
+  background: #8aa3c4;
+  border-radius: 2px;
   padding: 20px;
   text-align: center;
-  border-top: 5px solid #2477b3;
-  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+  border-top: 5px solid #351443;
+  box-shadow: 1 1 10px rgba(243, 157, 157, 0.15);
 }
 
 .introduccion {
@@ -124,18 +147,20 @@ button:hover {
 
 
 .activo {
-  color: green;
+  color: rgb(7, 78, 7);
+  text-shadow: greenyellow;
   font-weight: bold;
 }
 
 .no-activo {
-  color: red;
+  color: rgb(215, 19, 19);
   font-weight: bold;
 }
 
 .eliminar {
   margin-top: 10px;
   background-color: #b3261e;
+  color: white;
 }
 
 @media (max-width: 768px) {
