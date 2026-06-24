@@ -42,7 +42,7 @@ main {
 }
 
 .panel {
-  background: rgb(170, 164, 168);
+  background: linear-gradient(135deg, #460a5c, #f9ff7f);;
   padding: 25px;
   border-radius: 15px;
   margin-bottom: 25px;
@@ -50,7 +50,7 @@ main {
 }
 
 h2 {
-  color: #530a63;
+  color: #a8afff;
   text-align: center;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
