@@ -122,6 +122,10 @@ button:hover {
   box-shadow: 1 1 10px rgba(243, 157, 157, 0.15);
 }
 
+.tarjeta:hover {
+   transform: scale(1.05);
+}
+
 .introduccion {
     transition: 0.3s;
     font-family: sans-serif;
