@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Cursos</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<header>
+  <h1>Sistema de Cursos</h1>
+  <p>Institucion academica</p>
+</header>
+
+<main>
+  <section class="panel">
+    <h2>Registrar curso</h2>
+    <form id="formCurso">
+      <input type="text" id="nombre" placeholder="Curso">
+      <select id="categoria">
+        <option value="">Seleccione servicio</option>
+        <option value="Ciencias">Ciencias</option>
+        <option value="Ciencia sociales">Ciencias sociales</option>
+        <option value="Idiomas">Idiomas</option>
+        <option value="Programacion">Programacion</option>
+        <option value="Otro">Otro</option>
+      </select>
+      <input id="duracion" placeholder="Duracion">
+      <input type="text" id="cuposDisponibles" placeholder="Cupos Disponibles">
+      <select id="Activo">
+        <option value="true">Activo</option>
+        <option value="false">No activo</option>
+      </select>
+      <button type="submit">Guardar curso</button>
+    </form>
+    <p id="mensaje"></p>
+  </section>
+
+  <section class="panel">
+    <h2>Listado de cursos</h2>
+
+    <div class="acciones">
+      <button id="btnCargar">Cargar cursos</button>
+      <button id="btnTodos">Mostrar todos</button>
+      <button id="btnActivos">Mostrar activos</button>
+      <button id="btnNoActivos">Mostrar no activos</button>
+    </div>
+
+    <div id="listadoCursos" class="galeria"></div>
+  </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
