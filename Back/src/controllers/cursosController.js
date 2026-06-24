@@ -24,6 +24,29 @@ async function obtenerCursos(req, res) {
   }
 }
 
+
+async function obtenerCursoPorId(req, res) {
+  try {
+    const { id } = req.params;
+    const pool = await getConnection();
+    const resultado = await pool.request()
+      .input("id", sql.Int, Number(id))
+      .query(`
+        SELECT Id AS id, Nombre AS nombre, Categoria AS categoria, Duracion AS duracion, CuposDisponibles AS cuposdisponibles, Activo AS activo
+        FROM Cursos
+        WHERE Id = @id
+      `);
+
+    if (resultado.recordset.length === 0) {
+      return res.status(404).json({ mensaje: "Curso no encontrado" });
+    }
+
+    res.json(resultado.recordset[0]);
+  } catch (error) {
+    res.status(500).json({ mensaje: "Error al obtener curso", error: error.message });
+  }
+}
+
 async function crearCurso(req, res) {
   try {
     const { nombre, categoria, duracion, cuposDisponibles, activo } = req.body;
@@ -71,7 +94,7 @@ async function eliminarCurso(req, res) {
   }
 }
 
-module.exports = { probarConexion, obtenerCursos, crearCurso, eliminarCurso };
+module.exports = { probarConexion, obtenerCursos, obtenerCursoPorId, crearCurso, eliminarCurso };
 
 
 

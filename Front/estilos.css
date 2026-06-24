@@ -4,8 +4,12 @@ body {
   background-color: #eef3f7;
 }
 
+h1 {
+   color:rgb(35, 39, 29);
+}
+
 header {
-  background: linear-gradient(135deg, #2477b3, #37b37e);
+  background: linear-gradient(135deg, #da1f1f, #f9ff7f);
   color: white;
   text-align: center;
   padding: 40px;
@@ -43,8 +47,9 @@ input, select, button {
 }
 
 button {
-  background-color: #2477b3;
-  color: white;
+  background-color: #a24f77;
+  text-shadow: #b3261e;
+  color: rgb(182, 240, 141);
   border: none;
   cursor: pointer;
 }
@@ -93,6 +98,30 @@ button:hover {
   border-top: 5px solid #2477b3;
   box-shadow: 0 0 10px rgba(0,0,0,0.15);
 }
+
+.introduccion {
+    transition: 0.3s;
+    font-family: sans-serif;
+   box-shadow: 0 0 5px rgb(86, 84, 84);
+   padding: 25px;
+   border-radius: 20px;
+   max-width: 100%;
+   margin: 10px;
+}
+
+
+
+
+.introduccion img {
+    width: 100%;
+    height: 200px;
+    object-fit: containt;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+
 
 .activo {
   color: green;

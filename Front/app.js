@@ -9,7 +9,7 @@ const activo = document.querySelector("#activo");
 const listado = document.querySelector("#listadoCursos");
 const mensaje = document.querySelector("#mensaje");
 const btnCargar = document.querySelector("#btnCargar");
-const btnTodos = document.querySelector("#btnTodas");
+const btnTodos = document.querySelector("#btnTodos");
 const btnActivos = document.querySelector("#btnActivos");
 const btnNoActivos = document.querySelector("#btnNoActivos");
 
@@ -67,14 +67,14 @@ function mostrarTodos() {
 }
 
 function mostrarActivos() {
-  const cursosActivos = cursosActuales.filter(curso => curso.Activo);
+  const cursosActivos = cursosActuales.filter(curso => curso.activo);
   mostrarCursos(cursosActivos);
   mensaje.textContent = "Mostrando cursos activos.";
   mensaje.className = "ok";
 }
 
 function mostrarNoActivos() {
-  const cursosNoActivos = cursosActuales.filter(curso => !curso.Activo);
+  const cursosNoActivos = cursosActuales.filter(curso => !curso.activo);
   mostrarCursos(cursosNoActivos);
   mensaje.textContent = "Mostrando cursos no activos.";
   mensaje.className = "ok";
@@ -91,11 +91,11 @@ const nuevoCurso = {
   activo: activo.value === "true"
 };
 
-  if (nuevoCurso.nombre === "" || nuevoCurso.categoria === "" || nuevoCurso.duracion === "" || nuevoCurso.cuposDisponibles === "" ) {
-    mensaje.textContent = "Debe completar todos los datos correctamente.";
-    mensaje.className = "error";
-    return;
-  }
+  if (!nuevoCurso.nombre || !nuevoCurso.categoria || !nuevoCurso.duracion || !nuevoCurso.cuposDisponibles) {
+  mensaje.textContent = "Debe completar todos los datos correctamente.";
+  mensaje.className = "error";
+  return;
+}
 
   try {
     const respuesta = await fetch(API_URL, {
